@@ -1,25 +1,99 @@
+import 'package:app04/pages/avatar_page.dart';
 import 'package:flutter/material.dart';
 
 class AlertPage extends StatelessWidget {
-  const AlertPage({super.key});
-  showMyAlert(BuildContext context) {
+  showMyAlert1(BuildContext context1){
     showDialog(
-      context: context,
-      builder: (BuildContext context) {
+      context: context1,
+      builder: (BuildContext context1){
         return AlertDialog(
           title: Text("AlertDialog example!!!"),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.grey,
           content: Text(
-              "Este es un ejemplo del AlertDialog. esto es un texto de prueba"),
+            "Este es un ejemplo del AlertDialog. esto es un texto de prueba"),
           actions: [
             TextButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
+              onPressed: (){
+                Navigator.pop(context1);
+                Navigator.pop(context1);
+              }, 
               child: Text("Cancelar"),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: (){
+                Navigator.pop(context1);
+              }, 
+              child: Text("Aceptar"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  showMyAlert2(BuildContext context2){
+    showDialog(
+      context: context2,
+      builder: (BuildContext context2){
+        return AlertDialog(
+          icon: CircleAvatar(
+            backgroundImage: AssetImage(
+              "assets/images/imgn2.jpg",
+            ),
+          ),
+          title: Text("Blog post published"),
+          backgroundColor: Colors.grey,
+          content: Text(
+            "This blog post has been published . Team members will be able to edit this post and republish changes ."),
+          actions: [
+            TextButton(
+              onPressed: (){
+                Navigator.pop(context2);
+                Navigator.pop(context2);
+              }, 
+              child: Text(
+                "Cancelar",
+                ),
+            ),
+            TextButton(
+              onPressed: (){
+                Navigator.pop(
+                  context2
+                  );
+              }, 
+              child: Text(
+                "Aceptar",
+                ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+  showMyAlert3(BuildContext context3){
+    showDialog(
+      context: context3,
+      builder: (
+        BuildContext context3){
+        return AlertDialog(
+          icon: Image.asset("assets/images/imgn.jpg"),
+          title: Text("Your video has been upload!!!"),
+          backgroundColor: Colors.orange,
+          content: Text(
+            "Este es un ejemplo del AlertDialog. esto es un texto de prueba!!"),
+          actions: [
+            TextButton(
+              onPressed: (){
+                Navigator.pop(context3);
+                Navigator.pop(context3);
+              }, 
+              child: Text(
+                "Cancelar",
+                ),
+            ),
+            TextButton(
+              onPressed: (){
+                Navigator.pop(context3);
+              }, 
               child: Text("Aceptar"),
             ),
           ],
@@ -39,16 +113,29 @@ class AlertPage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children:[
             ElevatedButton(
-              onPressed: () {
-                showMyAlert(context);
-              },
-              child: Text("Alert"),
-            )
-          ],
+              onPressed: (){
+                showMyAlert1(context);
+              }, 
+              child: Text("Alert1")
+            ),
+            ElevatedButton(
+              onPressed: (){
+                showMyAlert2(context);
+              }, 
+              child: Text("Alert2")
+            ),
+            ElevatedButton(
+              onPressed: (){
+                showMyAlert3(context);
+              }, 
+              child: Text("Alert3")
+            ),
+            
+          ]
         ),
       ),
     );
   }
-  }
+}
