@@ -7,15 +7,17 @@ class AlertPage extends StatelessWidget {
       context: context1,
       builder: (BuildContext context1){
         return AlertDialog(
-          title: Text("AlertDialog example!!!"),
+          title: Text("AlertDialog example!"),
           backgroundColor: Colors.grey,
           content: Text(
             "Este es un ejemplo del AlertDialog. esto es un texto de prueba"),
           actions: [
             TextButton(
               onPressed: (){
-                Navigator.pop(context1);
-                Navigator.pop(context1);
+                Navigator.pop(context1,
+                );
+                Navigator.pop(context1,
+                );
               }, 
               child: Text("Cancelar"),
             ),
@@ -43,12 +45,14 @@ class AlertPage extends StatelessWidget {
           title: Text("Blog post published"),
           backgroundColor: Colors.grey,
           content: Text(
-            "This blog post has been published . Team members will be able to edit this post and republish changes ."),
+            "This blog post has been published .Team members will be able to edit this post and republish changes ."),
           actions: [
             TextButton(
               onPressed: (){
-                Navigator.pop(context2);
-                Navigator.pop(context2);
+                Navigator.pop(
+                  context2);
+                Navigator.pop(
+                  context2);
               }, 
               child: Text(
                 "Cancelar",
@@ -77,14 +81,18 @@ class AlertPage extends StatelessWidget {
         return AlertDialog(
           icon: Image.asset("assets/images/imgn.jpg"),
           title: Text("Your video has been upload!!!"),
-          backgroundColor: Colors.orange,
+          backgroundColor: Colors.amber,
           content: Text(
             "Este es un ejemplo del AlertDialog. esto es un texto de prueba!!"),
           actions: [
             TextButton(
               onPressed: (){
-                Navigator.pop(context3);
-                Navigator.pop(context3);
+                Navigator.pop(
+                  context3,
+                );
+                Navigator.pop(
+                  context3,
+                );
               }, 
               child: Text(
                 "Cancelar",
@@ -92,7 +100,8 @@ class AlertPage extends StatelessWidget {
             ),
             TextButton(
               onPressed: (){
-                Navigator.pop(context3);
+                Navigator.pop(context3,
+                );
               }, 
               child: Text("Aceptar"),
             ),
@@ -106,8 +115,9 @@ class AlertPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Alert Page"),
-        backgroundColor: Colors.orange,
+        title: Text("Alert Page",
+        ),
+        backgroundColor: Colors.amber,
         centerTitle: true,
       ),
       body: Center(
@@ -118,19 +128,24 @@ class AlertPage extends StatelessWidget {
               onPressed: (){
                 showMyAlert1(context);
               }, 
-              child: Text("Alert1")
+              child: Text("Alert1",
+              ),
             ),
             ElevatedButton(
               onPressed: (){
-                showMyAlert2(context);
+                showMyAlert2(context,
+                );
               }, 
-              child: Text("Alert2")
+              child: Text("Alert2",
+              ),
             ),
             ElevatedButton(
               onPressed: (){
-                showMyAlert3(context);
+                showMyAlert3(context,
+                );
               }, 
-              child: Text("Alert3")
+              child: Text("Alert3",
+              ),
             ),
             
           ]
