@@ -13,7 +13,7 @@ class TareaPage extends StatelessWidget {
       body: Column(
         children: [
 
-// card 1        
+        // card 1        
           Container(
             margin: const EdgeInsets.all(12.0),
             padding: const EdgeInsets.all(12.0),
